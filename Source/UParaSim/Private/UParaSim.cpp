@@ -1,21 +1,6 @@
 // Copyright Epic Games, Inc. All Rights Reserved.
 
 #include "UParaSim.h"
+#include "Modules/ModuleManager.h"
 
-#define LOCTEXT_NAMESPACE "FUParaSimModule"
-
-void FUParaSimModule::StartupModule()
-{
-	// This code will execute after your module is loaded into memory; the exact timing is specified in the .uplugin file per-module
-	int test_variable=5;
-}
-
-void FUParaSimModule::ShutdownModule()
-{
-	// This function may be called during shutdown to clean up your module.  For modules that support dynamic reloading,
-	// we call this function before unloading the module.
-}
-
-#undef LOCTEXT_NAMESPACE
-	
-IMPLEMENT_MODULE(FUParaSimModule, UParaSim)
+IMPLEMENT_PRIMARY_GAME_MODULE( FDefaultGameModuleImpl, UParaSim, "UParaSim" );

@@ -1,4 +1,4 @@
-// Copyright Epic Games, Inc. All Rights Reserved.
+// Copyright 2023, Institute for Artificial Intelligence. All Rights Reserved.
 
 using UnrealBuildTool;
 
@@ -7,9 +7,10 @@ public class UParaSim : ModuleRules
 	public UParaSim(ReadOnlyTargetRules Target) : base(Target)
 	{
 		PCHUsage = ModuleRules.PCHUsageMode.UseExplicitOrSharedPCHs;
-		
+		DefaultBuildSettings = BuildSettingsVersion.V2;
 		PublicIncludePaths.AddRange(
 			new string[] {
+				"UParaSim/Public"
 				// ... add public include paths required here ...
 			}
 			);
@@ -17,6 +18,7 @@ public class UParaSim : ModuleRules
 		
 		PrivateIncludePaths.AddRange(
 			new string[] {
+				"UParaSim/Private"
 				// ... add other private include paths required here ...
 			}
 			);
@@ -38,6 +40,9 @@ public class UParaSim : ModuleRules
 				"Engine",
 				"Slate",
 				"SlateCore",
+				"RenderCore",
+				"Networking",
+				"Sockets"
 				// ... add private dependencies that you statically link with here ...	
 			}
 			);
@@ -46,6 +51,7 @@ public class UParaSim : ModuleRules
 		DynamicallyLoadedModuleNames.AddRange(
 			new string[]
 			{
+				"Renderer"
 				// ... add any modules that your module loads dynamically here ...
 			}
 			);
