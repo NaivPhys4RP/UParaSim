@@ -10,3 +10,6 @@
 [submodule "Plugins/UUtils"]
 	path = Plugins/UUtils
 	url = https://github.com/NaivPhys4RP/UUtils.git
+[submodule "Plugins/unreal_vision_bridge"]
+	path = Plugins/unreal_vision_bridge
+	url = https://github.com/NaivPhys4RP/unreal_vision_bridge.git
