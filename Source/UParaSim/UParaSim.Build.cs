@@ -1,4 +1,4 @@
-// Copyright 2023, Institute for Artificial Intelligence. All Rights Reserved.
+// Copyright Epic Games, Inc. All Rights Reserved.
 
 using UnrealBuildTool;
 
@@ -6,54 +6,20 @@ public class UParaSim : ModuleRules
 {
 	public UParaSim(ReadOnlyTargetRules Target) : base(Target)
 	{
-		PCHUsage = ModuleRules.PCHUsageMode.UseExplicitOrSharedPCHs;
-		DefaultBuildSettings = BuildSettingsVersion.V2;
-		PublicIncludePaths.AddRange(
-			new string[] {
-				"UParaSim/Public"
-				// ... add public include paths required here ...
-			}
-			);
-				
+		PCHUsage = PCHUsageMode.UseExplicitOrSharedPCHs;
+	
+		PublicDependencyModuleNames.AddRange(new string[] { "Core", "CoreUObject", "Engine", "InputCore","UMG", "URoboVision","URoboViz"});
 		
-		PrivateIncludePaths.AddRange(
-			new string[] {
-				"UParaSim/Private"
-				// ... add other private include paths required here ...
-			}
-			);
-			
+		PublicIncludePaths.AddRange(new string[] {"URoboVision/Public","URoboViz/Public","URoboVizEditor/Public" });
+
+		PrivateDependencyModuleNames.AddRange(new string[] {  });
+
+		// Uncomment if you are using Slate UI
+		PrivateDependencyModuleNames.AddRange(new string[] { "Slate", "SlateCore", "RHI", "Renderer","Projects"});
 		
-		PublicDependencyModuleNames.AddRange(
-			new string[]
-			{
-				"Core",
-				// ... add other public dependencies that you statically link with here ...
-			}
-			);
-			
-		
-		PrivateDependencyModuleNames.AddRange(
-			new string[]
-			{
-				"CoreUObject",
-				"Engine",
-				"Slate",
-				"SlateCore",
-				"RenderCore",
-				"Networking",
-				"Sockets"
-				// ... add private dependencies that you statically link with here ...	
-			}
-			);
-		
-		
-		DynamicallyLoadedModuleNames.AddRange(
-			new string[]
-			{
-				"Renderer"
-				// ... add any modules that your module loads dynamically here ...
-			}
-			);
+		// Uncomment if you are using online features
+		// PrivateDependencyModuleNames.Add("OnlineSubsystem");
+
+		// To include OnlineSubsystemSteam, add it to the plugins section in your uproject file with the Enabled attribute set to true
 	}
 }
