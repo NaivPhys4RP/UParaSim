@@ -1,3 +1,6 @@
 [submodule "Plugins/UROSBridge"]
 	path = Plugins/UROSBridge
 	url = https://github.com/NaivPhys4RP/UROSBridge.git
+[submodule "Plugins/URoboViz"]
+	path = Plugins/URoboViz
+	url = https://github.com/NaivPhys4RP/URoboViz.git
