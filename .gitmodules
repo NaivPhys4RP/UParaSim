@@ -4,3 +4,6 @@
 [submodule "Plugins/URoboViz"]
 	path = Plugins/URoboViz
 	url = https://github.com/NaivPhys4RP/URoboViz.git
+[submodule "Plugins/URoboVision"]
+	path = Plugins/URoboVision
+	url = https://github.com/NaivPhys4RP/URoboVision.git
